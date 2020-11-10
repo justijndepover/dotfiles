@@ -107,6 +107,13 @@ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool 
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
 ###############################################################################
+# Applications                                                                #
+###############################################################################
+
+# iTerm: disable resize in increments of character widths
+defaults write com.googlecode.iterm2 DisableWindowSizeSnap -integer 1
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
