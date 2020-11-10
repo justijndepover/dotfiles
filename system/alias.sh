@@ -13,11 +13,11 @@ alias cla=clear
 alias tf="open ./"
 
 ds:trash(){
-	find . -name ".DS_Store" -print -delete
+    find . -name ".DS_Store" -print -delete
 }
 
 ds:find(){
-	find . -name ".DS_Store" -print
+    find . -name ".DS_Store" -print
 }
 
 # PHP
