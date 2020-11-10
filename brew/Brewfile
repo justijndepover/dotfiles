@@ -1,0 +1,29 @@
+# Taps
+tap "homebrew/bundle"
+tap "homebrew/core"
+
+# Binaries
+brew "dockutil"
+brew "git"
+
+# Development
+brew "php"
+brew "php@7.3"
+brew "composer"
+brew "node"
+brew "yarn"
+
+# Applications
+cask "1password"
+cask "alfred"
+cask "atom"
+cask "docker"
+cask "firefox"
+cask "google-chrome"
+cask "postman"
+cask "rectangle"
+cask "slack"
+cask "spotify"
+cask "tableplus"
+cask "the-unarchiver"
+cask "transmit"

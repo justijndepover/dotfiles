@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+BIN_NAME=$(basename "$0")
+COMMAND_NAME=$1
+SUB_COMMAND_NAME=$2
+
+sub_help () {
+  echo "Usage: $BIN_NAME <command>"
+  echo
+  echo "Commands:"
+  echo "   macos            Apply macOS system defaults"
+  echo "   dock             Apply macOS Dock settings"
+  echo "   brew             Install brew and all it's dependencies"
+  echo "   edit             Open dotfiles in IDE ($DOTFILES_IDE) and Git GUI ($DOTFILES_GIT_GUI)"
+  echo "   help             This help message"
+}
+
+sub_macos() {
+  echo "Installing macOS system defaults..."
+  . "${DOTFILES}"/macos/defaults.sh
+  echo "System defaults installed! Some changes may require a logout / restart to take effect."
+}
+
+sub_dock() {
+  . "${DOTFILES}"/macos/dock.sh && echo "Dock reloaded."
+}
+
+sub_brew() {
+  . "${DOTFILES}"/brew/install.sh
+}
+
+case $COMMAND_NAME in
+  "" | "-h" | "--help")
+    sub_help
+    ;;
+  *)
+    shift
+    sub_${COMMAND_NAME} $@
+    if [ $? = 127 ]; then
+      echo "'$COMMAND_NAME' is not a known command or has errors." >&2
+      sub_help
+      exit 1
+    fi
+    ;;
+esac
