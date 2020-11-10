@@ -11,7 +11,7 @@ sub_help () {
   echo "   macos            Apply macOS system defaults"
   echo "   dock             Apply macOS Dock settings"
   echo "   brew             Install brew and all it's dependencies"
-  echo "   edit             Open dotfiles in IDE ($DOTFILES_IDE) and Git GUI ($DOTFILES_GIT_GUI)"
+  echo "   edit             Open dotfiles in your favorite IDE"
   echo "   help             This help message"
 }
 
@@ -27,6 +27,10 @@ sub_dock() {
 
 sub_brew() {
   . "${DOTFILES}"/brew/install.sh
+}
+
+sub_edit() {
+  sh -c "$EDITOR $DOTFILES"
 }
 
 case $COMMAND_NAME in

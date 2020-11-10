@@ -20,9 +20,9 @@ Usage: dot <command>
 Commands:
    macos            Apply macOS system defaults
    dock             Apply macOS Dock settings
-   brew             Install brew and all it\'s dependencies
-   edit             Open dotfiles in IDE () and Git GUI ()
-   help             This help message
+   brew             Install brew and all it's dependencies
+   edit             Open dotfiles in your favorite IDE
+   help             Display this help message
 ```
 
 This command should be used to install all the preferences.
