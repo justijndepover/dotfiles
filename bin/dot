@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 BIN_NAME=$(basename "$0")
 COMMAND_NAME=$1
@@ -11,6 +11,7 @@ sub_help () {
   echo "   macos            Apply macOS system defaults"
   echo "   dock             Apply macOS Dock settings"
   echo "   brew             Install brew and all it's dependencies"
+  echo "   zsh              Copy the zsh configuration and reload"
   echo "   edit             Open dotfiles in your favorite IDE"
   echo "   help             This help message"
 }
@@ -27,6 +28,13 @@ sub_dock() {
 
 sub_brew() {
   . "${DOTFILES}"/brew/install.sh
+}
+
+sub_zsh() {
+  echo "Copying ZSH configuration file to ~/.zshrc"
+  cp "${DOTFILES}"/system/.zshrc ~/.zshrc
+  echo "Reloading configuration"
+  source ~/.zshrc
 }
 
 sub_edit() {
