@@ -8,6 +8,10 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until this script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+############################################################
+# Default                                                  #
+############################################################
+
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName "$COMPUTER_NAME"
 sudo scutil --set HostName "$COMPUTER_NAME"
@@ -16,11 +20,15 @@ sudo scutil --set HostName "$COMPUTER_NAME"
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-# Menu bar: show battery percentage
-defaults write com.apple.menuextra.battery ShowPercent YES
-
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
+
+############################################################
+# Menubar                                                  #
+############################################################
+
+# show battery percentage
+defaults write com.apple.menuextra.battery ShowPercent YES
 
 ############################################################
 # Finder                                                   #
@@ -74,6 +82,13 @@ defaults write com.apple.dock autohide-delay -float 0
 
 # Set the Dock animation speed
 defaults write com.apple.dock autohide-time-modifier -float 0.3
+
+############################################################
+# Keyboard and mouse                                       #
+############################################################
+
+# enable tap to click
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 
 ###############################################################################
 # Safari & WebKit                                                             #
