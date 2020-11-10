@@ -5,6 +5,7 @@ tap "homebrew/core"
 # Binaries
 brew "dockutil"
 brew "git"
+brew "fzf"
 
 # Development
 brew "php"

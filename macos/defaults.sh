@@ -112,6 +112,8 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 
 # iTerm: disable resize in increments of character widths
 defaults write com.googlecode.iterm2 DisableWindowSizeSnap -integer 1
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "${DOTFILES}/iterm"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 ###############################################################################
 # Kill affected applications                                                  #
