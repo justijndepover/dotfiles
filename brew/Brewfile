@@ -16,7 +16,7 @@ brew "yarn"
 
 # Applications
 cask "1password"
-cask "alfred"
+# cask "alfred"
 cask "atom"
 cask "docker"
 cask "firefox"
