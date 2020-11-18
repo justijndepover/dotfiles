@@ -34,7 +34,7 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='atom'
+  export EDITOR='code'
 fi
 
 # Compilation flags
