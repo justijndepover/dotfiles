@@ -6,6 +6,7 @@ tap "homebrew/core"
 brew "dockutil"
 brew "git"
 brew "fzf"
+brew "youtube-dl"
 
 # Development
 brew "php"
