@@ -1,0 +1,20 @@
+[user]
+	email = justijndepover@gmail.com
+	name = Justijn Depover
+
+[alias]
+	diff = diff --color --color-words --abbrev
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(blue) <%an>%Creset' --abbrev-commit
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+	contributors = shortlog --summary --numbered
+
+[credential]
+	helper = osxkeychain
+
+[color]
+	ui = true
+
+[pull]
+	rebase = true
