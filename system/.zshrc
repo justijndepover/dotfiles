@@ -42,3 +42,4 @@ fi
 
 # Custom alias
 source ${DOTFILES}/system/alias.sh
+source ${DOTFILES}/system/functions.sh
