@@ -22,6 +22,7 @@ Commands:
    dock             Apply macOS Dock settings
    brew             Install brew and all it's dependencies
    zsh              Copy the zsh configuration and reload
+   git              Copy git configuration
    edit             Open dotfiles in your favorite IDE
    help             Display this help message
 ```
