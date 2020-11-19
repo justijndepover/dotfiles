@@ -17,4 +17,4 @@
 	ui = true
 
 [pull]
-	rebase = true
+	rebase = false
