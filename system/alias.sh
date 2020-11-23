@@ -18,3 +18,6 @@ alias phpunit="clear && ./vendor/bin/phpunit"
 
 # Docker
 alias dc="docker-compose"
+
+# Editor
+alias e="code ."
