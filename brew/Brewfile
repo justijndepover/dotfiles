@@ -10,6 +10,7 @@ brew "youtube-dl"
 brew "ffmpeg"
 brew "htop"
 brew "wget"
+brew "gh"
 
 # Development
 brew "php"
