@@ -21,3 +21,6 @@ alias dc="docker-compose"
 
 # Editor
 alias e="code ."
+
+# Git
+alias nah='git reset --hard;git clean -df'
