@@ -1,3 +1,6 @@
+" set leader key
+map <Space> <Leader>
+
 " show line numbers
 set number relativenumber
 
