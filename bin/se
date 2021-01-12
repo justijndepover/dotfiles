@@ -1,0 +1,1 @@
+vim ${DOTFILES}/bin/"$(ls ${DOTFILES}/bin | fzf)"
