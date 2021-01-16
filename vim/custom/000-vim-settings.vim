@@ -1,5 +1,6 @@
 " set leader key
-map <Space> <Leader>
+" map <space> <Leader>
+let mapleader = ","
 
 " show line numbers
 set number relativenumber
@@ -28,6 +29,9 @@ set hlsearch
 " Automatically highlight search while still typing
 set incsearch
 
+" Delete highlighted text when pressing esc
+" nnoremap <esc> :noh<return><esc>
+
 " Use spaces instead of tabs
 set expandtab
 
@@ -46,3 +50,6 @@ set encoding=utf8
 set nobackup
 set nowritebackup
 set noswapfile
+
+" Map capital S to replace all
+nnoremap S :%s//g<left><left>

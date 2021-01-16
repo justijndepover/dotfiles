@@ -8,4 +8,6 @@ Plug 'preservim/NERDTree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/goyo.vim'
+Plug 'ap/vim-css-color'
+Plug 'tpope/vim-commentary'
 call plug#end()
