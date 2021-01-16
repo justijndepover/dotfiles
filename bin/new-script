@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# validate argument
+[ -z "$1" ] && echo "invalid argument" && exit 1
+
+# store path in variable
+FILE=${DOTFILES}/bin/$1
+
+# check if argument is already an executable command
+[ -x "$(command -v $1)" ] && echo "command already exists" && exit 1
+
+# check if file exists
+[ -f "$FILE" ] && echo "file already exists" && exit 1
+
+touch $FILE
+chmod +x $FILE
+echo "#! /bin/sh" > $FILE
+vim $FILE
