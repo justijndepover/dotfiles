@@ -1,8 +1,10 @@
 #! /bin/sh
 
-[ "$(stat -f "%Sm" -t %Y%m%d /tmp/corona 2>/dev/null)" != "$(date "+%Y%m%d")" ] && curl -s https://corona-stats.online/belgium > /tmp/corona
+if [[ "$(stat -f "%Sm" -t %Y%m%d /tmp/corona 2>/dev/null)" != "$(date "+%Y%m%d")" ]] || [[ $1 == "-r" ]]
+then
+    curl -s https://corona-stats.online/belgium > /tmp/corona
+fi
 
-grep "Belgium" /tmp/corona | 
+grep "Belgium" /tmp/corona |
     sed "s/[[:space:]]//g ; s/║//g ; s/│/;/g" |
     awk -F ';' '{print "😷  " $3 " (" $4 ") 💀  " $5 " (" $6 ")"}'
-
