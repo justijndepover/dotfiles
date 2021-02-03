@@ -1,1 +1,2 @@
+#! /bin/sh
 (ls ~/Sites | awk '{print "Sites/"$1}'; ls ~/Packages | awk '{print "Packages/"$1}') | fzf --height 40% --reverse | xargs -I {} ${EDITOR} ${HOME}/"{}"
