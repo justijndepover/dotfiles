@@ -35,3 +35,9 @@ cask "spotify"
 cask "tableplus"
 cask "the-unarchiver"
 cask "transmit"
+
+# Quick Look
+cask "qlcolorcode"
+cask "qlstephen"
+cask "qlmarkdown"
+cask "quicklook-json"
