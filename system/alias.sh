@@ -16,6 +16,9 @@ alias tf="open ./"
 alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
 alias phpunit="clear && ./vendor/bin/phpunit"
 
+# Laravel
+alias a="php artisan"
+
 # Docker
 alias dc="docker-compose"
 
