@@ -36,3 +36,9 @@ g:fix(){
     git commit -m '🐞 quick bugfix'
     git push
 }
+
+g:wip(){
+    git add .
+    git commit -m 'wip'
+    git push
+}
