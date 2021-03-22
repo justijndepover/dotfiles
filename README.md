@@ -24,6 +24,7 @@ Commands:
    zsh              Copy the zsh configuration and reload
    git              Copy git configuration
    vim              Copy vimrc configuration
+   pull             Pull the latest changes from Github
    edit             Open dotfiles in your favorite IDE
    help             Display this help message
 ```
