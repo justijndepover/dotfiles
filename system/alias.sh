@@ -15,6 +15,7 @@ alias tf="open ./"
 # PHP
 alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
 alias phpunit="clear && ./vendor/bin/phpunit"
+alias check="./vendor/bin/php-check"
 
 # Laravel
 alias a="php artisan"
