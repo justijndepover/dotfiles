@@ -1,0 +1,21 @@
+#! /bin/sh
+
+FILE="$HOME/.config/youtube-mix/ids"
+
+if [ ! -f "$FILE" ]; then
+    mkdir -p "${FILE%/*}" && touch "$FILE"
+    echo "#" > $FILE
+fi
+
+youtube-dl --flat-playlist --get-id PLEfu8sWdIup0BfJVYocHY3BSNtJkGKj7W > /tmp/youtube-mix
+
+DIFF=$(grep -Fxvf $FILE /tmp/youtube-mix)
+
+echo 'Downloading...'
+
+for word in $DIFF
+do
+    youtube-dl --output "/$HOME/Music/%(title)s.%(ext)s" --extract-audio --audio-format mp3 "$word"
+done
+
+cp /tmp/youtube-mix $FILE
