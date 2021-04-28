@@ -1,0 +1,6 @@
+#! /bin/sh
+
+[ -z "$1" ] && echo "invalid argument" && exit 1
+[ -z "$2" ] && echo "invalid argument" && exit 1
+
+chokidar "$1" -c "clear && $2"

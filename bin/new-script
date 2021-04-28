@@ -1,4 +1,4 @@
-#!/bin/sh
+#! /bin/sh
 
 # validate argument
 [ -z "$1" ] && echo "invalid argument" && exit 1
