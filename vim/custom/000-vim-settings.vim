@@ -1,6 +1,6 @@
 " set leader key
 " map <space> <Leader>
-let mapleader = ","
+let mapleader = " "
 
 " show line numbers
 set number relativenumber
