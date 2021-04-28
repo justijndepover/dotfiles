@@ -14,6 +14,7 @@ sub_help () {
   echo "   zsh              Copy the zsh configuration and reload"
   echo "   git              Copy git configuration"
   echo "   vim              Copy vimrc configuration"
+  echo "   alacritty        Copy alacritty configuration"
   echo "   pull             Pull the latest changes from Github"
   echo "   edit             Open dotfiles in your favorite IDE"
   echo "   help             This help message"
@@ -48,6 +49,12 @@ sub_git() {
 sub_vim() {
   echo "Copying Vim configuration file to ~/.vimrc"
   cp "${DOTFILES}"/vim/.vimrc ~/.vimrc
+}
+
+sub_alacritty() {
+  echo "Copying Alacritty configuration file to ~/.config/alacritty/alacritty.yml"
+  mkdir ~/.config/alacritty >> /dev/null 2>&1
+  cp "${DOTFILES}"/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 }
 
 sub_pull() {
