@@ -18,8 +18,9 @@ brew "php"
 brew "php@7.4"
 brew "php@7.3"
 brew "composer"
-brew "node"
+brew "node@14"
 brew "yarn"
+brew "neovim"
 
 # Applications
 cask "1password"
