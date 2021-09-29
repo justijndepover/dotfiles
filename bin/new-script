@@ -15,4 +15,4 @@ FILE=${DOTFILES}/bin/$1
 touch $FILE
 chmod +x $FILE
 echo "#! /bin/sh" > $FILE
-vim $FILE
+nvim $FILE
