@@ -12,7 +12,19 @@ let g:NERDTreeShowHidden=1
 autocmd FileType php setlocal commentstring=//\ %s "php = //
 
 " set the nord color scheme
-colorscheme nord
+" colorscheme nord
 
-nnoremap <leader>o :GFiles<CR>
+" light - mirage - dark
+set termguicolors
+let ayucolor="mirage" 
+colorscheme ayu
+
+nnoremap <leader>o :GFiles --cached --others<CR>
 nnoremap <leader>c :Commits<CR>
+
+" remap gitgutter
+let g:gitgutter_map_keys = 0
+nnoremap <leader>gs :GitGutterStageHunk<CR>
+nnoremap <leader>gu :GitGutterUndoHunk<CR>
+nnoremap <leader>gp :GitGutterPreviewHunk<CR>
+

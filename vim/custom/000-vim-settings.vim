@@ -83,23 +83,24 @@ set clipboard=unnamed
 set splitbelow splitright
 
 " Navigate splits
-nnoremap <leader>fj <C-W><C-J>
-nnoremap <leader>fk <C-W><C-K>
-nnoremap <leader>fl <C-W><C-L>
-nnoremap <leader>fh <C-W><C-H>
+nnoremap <leader>j <C-W><C-J>
+nnoremap <leader>k <C-W><C-K>
+nnoremap <leader>l <C-W><C-L>
+nnoremap <leader>h <C-W><C-H>
 
-" Navigate buffers
-nnoremap <leader>tl :bnext<CR>
-nnoremap <leader>tj :bnext<CR>
-nnoremap <leader>th :bprev<CR>
-nnoremap <leader>tk :bprev<CR>
+" resize splits
+nnoremap <c-j> :resize -2<CR>
+nnoremap <c-k> :resize +2<CR>
+nnoremap <c-l> :vertical resize -2<CR>
+nnoremap <c-h> :vertical resize +2<CR>
 
-" redo
-nnoremap <leader>r <C-R>
+" Navigate buffers with tab and shift tab in normal mode
+nnoremap <TAB> :bnext<CR>
+nnoremap <S-TAB> :bprev<CR>
 
 " indenting doesn't exit visual mode
-" vnoremap < <gv
-" vnoremap > >gv
+vnoremap < <gv
+vnoremap > >gv
 
 set foldmethod=indent
 set foldnestmax=10
@@ -113,3 +114,10 @@ set listchars=tab:→\ ,space:⋅
 
 " set amount of time before keymapping completes
 set timeoutlen=300
+
+" faster scrolling
+nnoremap J 10j
+nnoremap K 10k
+
+" search the current selected text
+vnoremap <leader>f y/\V<C-R>=escape(@",'/\')<CR><CR>

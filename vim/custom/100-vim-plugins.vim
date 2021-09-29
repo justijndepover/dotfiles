@@ -9,6 +9,7 @@ Plug 'preservim/NERDTree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
+Plug 'ayu-theme/ayu-vim'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -16,4 +17,5 @@ Plug 'airblade/vim-gitgutter'
 Plug 'folke/which-key.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
