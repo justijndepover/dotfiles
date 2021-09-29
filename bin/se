@@ -1,2 +1,2 @@
 #! /bin/sh
-ls ${DOTFILES}/bin | fzf --height 40% --reverse | xargs -o -I {} vim ${DOTFILES}/bin/"{}"
+ls ${DOTFILES}/bin | fzf --height 40% --reverse | xargs -o -I {} nvim ${DOTFILES}/bin/"{}"
