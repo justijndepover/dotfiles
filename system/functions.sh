@@ -33,7 +33,7 @@ g:push(){
 
 g:fix(){
     git add .
-    git commit -m '🐞 quick bugfix'
+    git commit -m 'bugfix 🦟'
     git push
 }
 
@@ -41,4 +41,8 @@ g:wip(){
     git add .
     git commit -m 'wip'
     git push
+}
+
+g:since(){
+    git diff $1 --name-only
 }
