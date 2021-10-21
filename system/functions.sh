@@ -33,7 +33,7 @@ g:push(){
 
 g:fix(){
     git add .
-    git commit -m 'bugfix 🦟'
+    git commit -m ':bug: bugfix'
     git push
 }
 
