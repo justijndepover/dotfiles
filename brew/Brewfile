@@ -12,6 +12,9 @@ brew "htop"
 brew "wget"
 brew "gh"
 brew "wakeonlan"
+brew "nmap"
+brew "arp-scan"
+brew "ipcalc"
 
 # Development
 brew "php"
@@ -38,6 +41,7 @@ cask "tableplus"
 cask "the-unarchiver"
 cask "transmit"
 cask "alacritty"
+cask "raycast"
 
 # Quick Look
 cask "qlcolorcode"
