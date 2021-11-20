@@ -1,5 +1,5 @@
 window:
-  decorations: transparent
+  decorations: Full
   title: "rocket"
   dynamic_title: false
   padding:
