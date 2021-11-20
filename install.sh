@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Setting up your Mac..."
+echo "Setting up your dotfiles..."
 read -p "This script will install ohmyzsh, do you want to continue? (y/n)" choice
 
 if [ "$choice" != "y" ]; then
