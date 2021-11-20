@@ -4,6 +4,9 @@ export DOTFILES=$HOME/.dotfiles
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# Source dotfiles
+export PATH="$DOTFILES/bin:$PATH"
+
 # ZSH theme
 ZSH_THEME="sorin"
 
