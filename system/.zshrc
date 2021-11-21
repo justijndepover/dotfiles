@@ -46,3 +46,9 @@ fi
 # Custom alias
 source ${DOTFILES}/system/alias.sh
 source ${DOTFILES}/system/functions.sh
+
+if [[ "$(uname)" == "Darwin" ]]; then
+    source ${DOTFILES}/macos/init.sh
+else
+    source ${DOTFILES}/linux/init.sh
+fi
