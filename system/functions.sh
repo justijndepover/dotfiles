@@ -32,15 +32,19 @@ g:push(){
 }
 
 g:fix(){
-    git add .
-    git commit -m ':bug: bugfix'
-    git push
+    g:push ':bug: bugfix'
 }
 
 g:wip(){
-    git add .
-    git commit -m 'wip'
-    git push
+    g:push ':gear: wip'
+}
+
+g:todo(){
+    g:push ':book: todos'
+}
+
+g:clean(){
+    g:push ':soap: cleanup code'
 }
 
 g:since(){
