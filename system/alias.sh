@@ -19,6 +19,7 @@ alias check="./vendor/bin/php-check"
 
 # Laravel
 alias a="php artisan"
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
 # Docker
 alias dc="docker-compose"
