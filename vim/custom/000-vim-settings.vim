@@ -121,3 +121,13 @@ nnoremap K 10k
 
 " search the current selected text
 vnoremap <leader>f y/\V<C-R>=escape(@",'/\')<CR><CR>
+
+" move lines up and down with Alt + vim keys
+" Ï => Alt + j
+" È => Alt + k
+nnoremap Ï :m .+1<CR>==
+nnoremap È :m .-2<CR>==
+inoremap Ï <Esc>:m .+1<CR>==gi
+inoremap È <Esc>:m .-2<CR>==gi
+vnoremap Ï :m '>+1<CR>gv=gv
+vnoremap È :m '<-2<CR>gv=gv
